@@ -10,6 +10,12 @@ td{border:1px solid gray;padding:5px;}
 <body>
 <?php
 
+/*
+$command = escapeshellcmd('nlpg.dothome.co.kr/html/temp.py');
+$output = shell_exec($command);
+echo $output;
+*/
+
 $conn = mysqli_connect("localhost", "nlpg", "ewha1886!");
 mysqli_query($conn,'SET NAMES utf8');
 if (!$conn) {

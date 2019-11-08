@@ -68,208 +68,154 @@
     </div>
   </header>
 
-  <?php
-  include("list.php");
-  $row = mysqli_fetch_assoc($result);
-  ?>
-
   <!-- Main Content -->
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="post-preview">
-          <a href="<?php echo $row['url'] ?>">
+          <a href="{{resultData.url[1]}}">
             <h2 class="post-title">
-              <?php 
-              echo "{$row['title']}"
-              ?>
+              {{resultData.title[1]}}
+              
+              
             </h2>
             <h3 class="post-subtitle">
-              <?php echo "{$row['content']}"?>
+              {{resultData.content[1]}}
             </h3>
           </a>
           <p class="post-meta">
-            on October 12, 2019</p>  
+            on November 12, 2019</p>  
         </div>
 
-        <?php
-        $row = mysqli_fetch_assoc($result);
-        ?>
+    
+        <hr>
+        <div class="post-preview">
+          <a href="{{resultData.url[2]}}">
+            <h2 class="post-title">
+              {{resultData.title[2]}}
+              
+            </h2>
+            <h3 class="post-subtitle">
+              {{resultData.content[2]}}
+            </h3>
+          </a>
+          <p class="post-meta">
+            on November 12, 2019</p>  
+        </div>
 
         <hr>
         <div class="post-preview">
-          <a href="<?php echo $row['url'] ?>">
+          <a href="{{resultData.url[3]}}">
             <h2 class="post-title">
-              <?php 
-              echo "{$row['title']}"
-              ?>
+              {{resultData.title[3]}}
             </h2>
             <h3 class="post-subtitle">
-              <?php echo "{$row['content']}"?>
+              {{resultData.cotent[3]}}
             </h3>
           </a>
           <p class="post-meta">
-            on October 12, 2019</p>  
-        </div>
-
-        <?php
-        $row = mysqli_fetch_assoc($result);
-        ?>
-
-        <hr>
-        <div class="post-preview">
-          <a href="<?php echo $row['url'] ?>">
-            <h2 class="post-title">
-              <?php 
-              echo "{$row['title']}"
-              ?>
-            </h2>
-            <h3 class="post-subtitle">
-              <?php echo "{$row['content']}"?>
-            </h3>
-          </a>
-          <p class="post-meta">
-            on October 12, 2019</p>  
+            on November 12, 2019</p>  
         </div>
         <hr>
 
-        <?php
-        $row = mysqli_fetch_assoc($result);
-        ?>
-
         <div class="post-preview">
-          <a href="<?php echo $row['url'] ?>">
+          <a href="{{resultData.url[4]}}">
             <h2 class="post-title">
-              <?php 
-              echo "{$row['title']}"
-              ?>
+              {{resultData.title[4]}}
             </h2>
             <h3 class="post-subtitle">
-              <?php echo "{$row['content']}"?>
+              {{resultData.cotent[4]}}
             </h3>
           </a>
           <p class="post-meta">
-            on October 12, 2019</p>   
+            on November 12, 2019</p>   
         </div>
-
-        <?php
-        $row = mysqli_fetch_assoc($result);
-        ?>
 
         <hr>
         <div class="post-preview">
-          <a href="<?php echo $row['url'] ?>">
+          <a href="{{resultData.url[5]}}">
             <h2 class="post-title">
-              <?php 
-              echo "{$row['title']}"
-              ?>
+              {{resultData.title[5]}}
             </h2>
             <h3 class="post-subtitle">
-              <?php echo "{$row['content']}"?>
+              {{resultData.content[5]}}
             </h3>
           </a>
           <p class="post-meta">
-            on October 12, 2019</p>   
+            on November 12, 2019</p>   
         </div>
-
-        <?php
-        $row = mysqli_fetch_assoc($result);
-        ?>
 
         <hr>
         <div class="post-preview">
-          <a href="<?php echo $row['url'] ?>">
+          <a href="{{resultData.url[6]}}">
             <h2 class="post-title">
-              <?php 
-              echo "{$row['title']}"
-              ?>
+              {{resultData.title[6]}}
             </h2>
             <h3 class="post-subtitle">
-              <?php echo "{$row['content']}"?>
+              {{resultData.content[6]}}
             </h3>
           </a>
           <p class="post-meta">
-            on October 12, 2019</p> 
+            on November 12, 2019</p> 
         </div>
-
-        <?php
-        $row = mysqli_fetch_assoc($result);
-        ?>
 
         <hr>
         <div class="post-preview">
-          <a href="<?php echo $row['url'] ?>">
+          <a href="{{resultData.url[7]}}">
             <h2 class="post-title">
-              <?php 
-              echo "{$row['title']}"
-              ?>
+              {{resultData.title[7]}}
             </h2>
             <h3 class="post-subtitle">
-              <?php echo "{$row['content']}"?>
+              {{resultData.content[7]}}
             </h3>
           </a>
           <p class="post-meta">
-            on October 12, 2019</p> 
+            on November 12, 2019</p> 
         </div>
 
-        <?php
-        $row = mysqli_fetch_assoc($result);
-        ?>
 
         <hr>
         <div class="post-preview">
-          <a href="<?php echo $row['url'] ?>">
+          <a href="{{resultData.url[8]}}">
             <h2 class="post-title">
-              <?php 
-              echo "{$row['title']}"
-              ?>
+              {{resultData.title[8]}}
             </h2>
             <h3 class="post-subtitle">
-              <?php echo "{$row['content']}"?>
+              {{resultData.content[8]}}
             </h3>
           </a>
           <p class="post-meta">
-            on October 12, 2019</p> 
+            on November 12, 2019</p> 
         </div>
 
-        <?php
-        $row = mysqli_fetch_assoc($result);
-        ?>
 
         <hr>
         <div class="post-preview">
-          <a href="<?php echo $row['url'] ?>">
+          <a href="{{resultData.url[9]}}">
             <h2 class="post-title">
-              <?php 
-              echo "{$row['title']}"
-              ?>
+              {{resultData.title[9]}}
             </h2>
             <h3 class="post-subtitle">
-              <?php echo "{$row['content']}"?>
+              {{resultData.content[9]}}
             </h3>
           </a>
           <p class="post-meta">
-            on October 12, 2019</p> 
+            on November 12, 2019</p> 
         </div>
 
-        <?php
-        $row = mysqli_fetch_assoc($result);
-        ?>
 
         <hr>
         <div class="post-preview">
-          <a href="<?php echo $row['url'] ?>">
+          <a href="{{resultData.url[10]}}">
             <h2 class="post-title">
-              <?php 
-              echo "{$row['title']}"
-              ?>
+              {{resultData.title[10]}}
             </h2>
             <h3 class="post-subtitle">
-              <?php echo "{$row['content']}"?>
+              {{resultData.content[10]}}
             </h3>
           </a>
           <p class="post-meta">
-            on October 12, 2019</p> 
+            on November 12, 2019</p> 
         </div>
         <hr>
         <!-- Pager -->
