@@ -1,3 +1,5 @@
+# 안 쓰는 파일
+
 import pymysql
 
 from flaskimport Blueprint, request, render_template, flash, redirect, url_for
