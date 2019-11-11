@@ -1,17 +1,14 @@
+# Import flask dependencies
 from flask import Blueprint, request, render_template, flash, redirect, url_for
 from flask import current_app as current_app
 
-from nlpg.module import dbModule
+from module import dbModule
 
-main= Blueprint('main', __name__, url_prefix='/')   #url_prefix는 파일 경로
-
-@main.route('/main', methods=['GET'])
-def index():
-    return render_template('/nlpg/index.html',
-                            resultData=None)
+# Define the blueprint
+main= Blueprint('index', __name__, url_prefix='/')   #url_prefix는 파일 경로
 
 # SELECT 함수 예제
-@main.route('/select', methods=['GET'])
+@main.route('/', methods=['GET'])
 def select():
     db_class= dbModule.Database()
 
