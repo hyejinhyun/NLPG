@@ -1,15 +1,8 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Nov  9 17:17:18 2019
-
-@author: hyeji
-"""
-
 import pymysql
 
 class Database():
     def __init__(self):
-        self.db= pymysql.connect(host='localhost',
+        self.db= pymysql.connect(host='nlpg.mysql.pythonanywhere-services.com',
                                   user='nlpg',
                                   password='ewha1886!',
                                   db='nlpg',
