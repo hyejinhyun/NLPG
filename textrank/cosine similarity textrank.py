@@ -104,7 +104,7 @@ def get_sum_list():
     
     for (i,a) in enumerate(art_link):
     #articles[i][0]: 링크, articles[i][1]: 제목, articles[i][2]: 본문
-        if i == 5:
+        if i == 10:
             break
         l = a.get('href')
         (t,c) = get_art_body(l)
