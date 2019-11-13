@@ -5,7 +5,7 @@ class Database():
         self.db= pymysql.connect(host='nlpg.mysql.pythonanywhere-services.com',
                                   user='nlpg',
                                   password='ewha1886!',
-                                  db='nlpg',
+                                  db='nlpg$nlpg',
                                   charset='utf8')
         self.cursor= self.db.cursor(pymysql.cursors.DictCursor)
 
