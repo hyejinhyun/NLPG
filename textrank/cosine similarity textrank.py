@@ -10,7 +10,6 @@ from konlpy.tag import Okt
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
 import networkx as nx
-import matplotlib.pyplot as plt
 from numpy import dot
 from numpy.linalg import norm
 import itertools
@@ -71,10 +70,6 @@ class TextRank(object):
             sim = co_sim(n1, n2)
             if sim != 0:
                 graph.add_edge(n1, n2, weight=sim)
-
-        #그래프 시각화 부분
-        nx.draw_networkx(graph)
-        plt.show()
     
         pagerank = nx.pagerank(graph, weight='weight')
         reordered = sorted(pagerank, key=pagerank.get, reverse=True)
@@ -111,7 +106,6 @@ def get_sum_list():
         (t,c) = get_art_body(l)
         
         r = TextRank().summarize(c)
-        print(r)
         r = "-".join(r)
         articles.append([t,r,l])  #[[제목,텍스트랭크,링크],...]]
 
