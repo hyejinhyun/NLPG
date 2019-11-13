@@ -48,6 +48,10 @@ class GraphMatrix(object):
 class TextRank(object):  
     def summarize(self, article):
         text = SentenceTokenizer().text2sentences(article)
+        
+        if len(text) <= 3:
+            return 0
+        
         n_text = SentenceTokenizer().get_nouns(text)
         mat = GraphMatrix().build_mat(n_text)
 
@@ -106,6 +110,8 @@ def get_sum_list():
         (t,c) = get_art_body(l)
         
         r = TextRank().summarize(c)
+        if r == 0:
+            continue
         r = "-".join(r)
         articles.append([t,r,l])  #[[제목,텍스트랭크,링크],...]]
 
