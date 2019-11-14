@@ -12,15 +12,15 @@
   <title>News Summarization by NLPG</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
   <!-- Custom styles for this template -->
-  <link href="css/clean-blog.min.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/clean-blog.min.css')}}" rel="stylesheet">
 
 </head>
 
@@ -73,160 +73,20 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="post-preview">
-          <a href="{{resultData.url[1]}}">
+        {% for obj in resultData %}
+          <a href= {{obj.url}}>
             <h2 class="post-title">
-              {{resultData.title[1]}}
-              
-              
+              {{obj.title}}
             </h2>
             <h3 class="post-subtitle">
-              {{resultData.content[1]}}
+              {{obj.content}}
             </h3>
           </a>
+         {% endfor %}
           <p class="post-meta">
-            on November 12, 2019</p>  
+            on November 12, 2019</p>
         </div>
 
-    
-        <hr>
-        <div class="post-preview">
-          <a href="{{resultData.url[2]}}">
-            <h2 class="post-title">
-              {{resultData.title[2]}}
-              
-            </h2>
-            <h3 class="post-subtitle">
-              {{resultData.content[2]}}
-            </h3>
-          </a>
-          <p class="post-meta">
-            on November 12, 2019</p>  
-        </div>
-
-        <hr>
-        <div class="post-preview">
-          <a href="{{resultData.url[3]}}">
-            <h2 class="post-title">
-              {{resultData.title[3]}}
-            </h2>
-            <h3 class="post-subtitle">
-              {{resultData.cotent[3]}}
-            </h3>
-          </a>
-          <p class="post-meta">
-            on November 12, 2019</p>  
-        </div>
-        <hr>
-
-        <div class="post-preview">
-          <a href="{{resultData.url[4]}}">
-            <h2 class="post-title">
-              {{resultData.title[4]}}
-            </h2>
-            <h3 class="post-subtitle">
-              {{resultData.cotent[4]}}
-            </h3>
-          </a>
-          <p class="post-meta">
-            on November 12, 2019</p>   
-        </div>
-
-        <hr>
-        <div class="post-preview">
-          <a href="{{resultData.url[5]}}">
-            <h2 class="post-title">
-              {{resultData.title[5]}}
-            </h2>
-            <h3 class="post-subtitle">
-              {{resultData.content[5]}}
-            </h3>
-          </a>
-          <p class="post-meta">
-            on November 12, 2019</p>   
-        </div>
-
-        <hr>
-        <div class="post-preview">
-          <a href="{{resultData.url[6]}}">
-            <h2 class="post-title">
-              {{resultData.title[6]}}
-            </h2>
-            <h3 class="post-subtitle">
-              {{resultData.content[6]}}
-            </h3>
-          </a>
-          <p class="post-meta">
-            on November 12, 2019</p> 
-        </div>
-
-        <hr>
-        <div class="post-preview">
-          <a href="{{resultData.url[7]}}">
-            <h2 class="post-title">
-              {{resultData.title[7]}}
-            </h2>
-            <h3 class="post-subtitle">
-              {{resultData.content[7]}}
-            </h3>
-          </a>
-          <p class="post-meta">
-            on November 12, 2019</p> 
-        </div>
-
-
-        <hr>
-        <div class="post-preview">
-          <a href="{{resultData.url[8]}}">
-            <h2 class="post-title">
-              {{resultData.title[8]}}
-            </h2>
-            <h3 class="post-subtitle">
-              {{resultData.content[8]}}
-            </h3>
-          </a>
-          <p class="post-meta">
-            on November 12, 2019</p> 
-        </div>
-
-
-        <hr>
-        <div class="post-preview">
-          <a href="{{resultData.url[9]}}">
-            <h2 class="post-title">
-              {{resultData.title[9]}}
-            </h2>
-            <h3 class="post-subtitle">
-              {{resultData.content[9]}}
-            </h3>
-          </a>
-          <p class="post-meta">
-            on November 12, 2019</p> 
-        </div>
-
-
-        <hr>
-        <div class="post-preview">
-          <a href="{{resultData.url[10]}}">
-            <h2 class="post-title">
-              {{resultData.title[10]}}
-            </h2>
-            <h3 class="post-subtitle">
-              {{resultData.content[10]}}
-            </h3>
-          </a>
-          <p class="post-meta">
-            on November 12, 2019</p> 
-        </div>
-        <hr>
-        <!-- Pager -->
-        <!-- <div class="clearfix">
-          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-        </div> -->
-      </div>
-    </div>
-  </div>
-
-  <hr>
 
   <!-- Footer -->
   <footer>
@@ -266,11 +126,11 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/clean-blog.min.js"></script>
+  <script src="{{ url_for('static', filename='js/clean-blog.min.js')}}"></script>
 
 </body>
 
