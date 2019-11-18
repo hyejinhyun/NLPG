@@ -3,13 +3,9 @@ from flask import Blueprint, render_template    # ,request, render_template, fla
 from flask import current_app as current_app
 
 from module import dbModule
-from module import CosineSimilarity_textrank
 
 # Define the blueprint
 main= Blueprint('index', __name__, url_prefix='/')   #url_prefix는 파일 경로
-
-# db insert
-CosineSimilarity_textrank.myThread("hi", 300000)  # Thread 쓸 때
 
 # SELECT 함수
 @main.route('/', methods=['GET'])
