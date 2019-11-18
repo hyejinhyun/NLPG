@@ -16,8 +16,6 @@ from numpy.linalg import norm
 import itertools
 
 import pymysql
-import threading
-from time import sleep
 
 class SentenceTokenizer(object):
     def __init__(self):
@@ -129,7 +127,9 @@ def insert_db():
         conn.close()
     # print("DB insert 성공")
 
+insert_db()
 
+'''
 def myThread(name,nsec):
     insert_db()
     sleep(nsec)
@@ -138,4 +138,4 @@ def myThread(name,nsec):
         t = threading.Thread(target=myThread, args=("Thread-1",300000))
         t.start()
         t.join()
-
+'''
