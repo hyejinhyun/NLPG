@@ -1,6 +1,6 @@
-Online Newspaper Summarization Web Service using Textrank Algorithm
+Text summarization을 이용한 인공지능 뉴스 헤드라인 제작
 ============
-> NLPG / 문효진, 백지희, 유현선, 정성원, 현혜진
+> NLPG / 문효진, 백지희, 현혜진
 
 # 1. 프로젝트 소개
 
@@ -12,7 +12,7 @@ Online Newspaper Summarization Web Service using Textrank Algorithm
 ## 2.1 사용 언어 및 플랫폼
 
 사용 언어: python(+flask), html(+css), sql
-사용 플랫폼: pythonanywhere, mysql
+#사용 플랫폼: pythonanywhere, mysql
 
 ## 2.2 textrank 알고리즘
 
@@ -65,7 +65,7 @@ NetworkX 라이브러리를 사용해 각 문장들을 edge로, 문장들간의 
 # 3. References
 
 textrank:
-<https://wikidocs.net/24603>
-<https://github.com/lovit/textrank/>
-<https://github.com/ExcelsiorCJH/Projects/tree/master/Text%20Smmarization>
-<https://github.com/theeluwin/textrankr>
+<https://wikidocs.net/24603>  
+<https://github.com/lovit/textrank/>  
+<https://github.com/ExcelsiorCJH/Projects/tree/master/Text%20Smmarization>  
+<https://github.com/theeluwin/textrankr>  
