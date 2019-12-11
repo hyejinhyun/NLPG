@@ -7,7 +7,7 @@ Text summarization을 이용한 인공지능 뉴스 헤드라인 제작
 최근 온라인 기사들의 조회수 경쟁으로 인해 내용과 관련성이 떨어지는 자극적인 제목의 기사들이 늘어나고 있다. 이에 따라 사용자들이 기사를 통해 원하는 정보를 찾는 것에 어려움을 느끼고 있다. 해당 프로젝트에서는 Text summarization을 이용한 인공지능 뉴스 헤드라인 제작 프로젝트를 제안한다. 이 프로젝트는 크게 두 가지로, Extractive Summarization을 하여 기사 전문을 세 줄로 요약하는 것과 Abstractive Summarization을 통해 인공지능이 생성한 뉴스 헤드라인을 제공하는 서비스이다. 기존 기사들에 인공지능 기사 제목을 함께 제공해 사용자들이 합리적이고 효율적으로 원하는 정보를 가진 기사를 찾을 수 있도록 도움을 줄 것이다.
 
 # 2. 구현
-<http://nlpg.pythonanywhere.com>
+현재 구현 페이지 <http://nlpg.pythonanywhere.com>
 
 
 ## 2.1 사용 언어 및 플랫폼
@@ -65,7 +65,7 @@ NetworkX 라이브러리를 사용해 각 문장들을 edge로, 문장들간의 
 
 # 3. References
 
-textrank  
+textrank 알고리즘  
 <https://wikidocs.net/24603>  
 <https://github.com/lovit/textrank/>  
 <https://github.com/ExcelsiorCJH/Projects/tree/master/Text%20Smmarization>  
